@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" height="800" width="900"></canvas>
+  </body>
+</html>
+<script>
+  let canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
+  let x = 0;
+  let y = 0;
+  let direction = 5;
+
+  setInterval(move, 16);
+  
+  function move() {
+    x = x + 5;
+    y = y + direction;
+    ctx.clearRect(0, 0, 2000, 2000);
+    ctx.fillRect(x, y, 40, 50);
+
+    if (y > 100) {
+      direction = -5;
+    }
+  }
+</script>
