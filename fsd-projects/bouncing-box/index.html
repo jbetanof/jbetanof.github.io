@@ -71,6 +71,7 @@
         // TODO 2 - // Variable declarations below here
         var positionX = 0;
         let speed = 10;
+        let points = 0
 
         /**
          * This Function will be called 20 times/second.
@@ -99,7 +100,8 @@
          */
         function handleBoxClick() {
           positionX = 0;
-          changeBoxText(.3);
+          points = points + 1
+          changeBoxText(points);
           speed = 3 * points + 10
         }
       })();
